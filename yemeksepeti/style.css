@@ -1,0 +1,514 @@
+body {
+  margin: 0; /* Sayfanın kenar boşluğunu sıfırlar */
+  font-family: 'Inter', Arial, sans-serif; /* Genel yazı tipi ailesi */
+  background: #fff; /* Sayfa arka plan rengi */
+  color: #222; /* Varsayılan metin rengi */
+}
+
+.header {
+  display: flex; /* Header içeriğini yatay hizalar */
+  justify-content: space-between; /* Header içeriğini iki yana yayar */
+  align-items: center; /* Dikeyde ortalar */
+  max-width: 1200px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortalar */
+  padding: 16px 0; /* Üst-alt boşluk */
+  background: #fff; /* Arka plan rengi */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Hafif gölge */
+}
+.logo {
+  color: #ea580c; /* Logo rengi */
+  font-size: 2rem; /* Logo yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+}
+.nav a {
+  color: #444; /* Menü link rengi */
+  text-decoration: none; /* Altı çizgisiz */
+  margin-left: 24px; /* Sol boşluk */
+  font-size: 1rem; /* Yazı boyutu */
+  transition: color 0.2s; /* Renk geçişi */
+}
+.nav a:hover {
+  color: #ea580c; /* Menü linki üzerine gelince renk değişimi */
+}
+.hero {
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%); /* Hero alanı degrade arka plan */
+  color: #fff; /* Yazı rengi */
+  text-align: center; /* Ortala */
+  padding: 64px 16px 48px 16px; /* İç boşluklar */
+  position: relative; /* Konumlandırma */
+}
+.hero .highlight {
+  color: #fde047; /* Vurgulu metin rengi */
+  display: block; /* Blok olarak göster */
+}
+.hero p {
+  font-size: 1.25rem; /* Açıklama yazı boyutu */
+  margin-bottom: 32px; /* Alt boşluk */
+  opacity: 0.95; /* Hafif şeffaflık */
+}
+.search-bar {
+  display: flex; /* Yatay hizalama */
+  justify-content: center; /* Ortala */
+  gap: 12px; /* Elemanlar arası boşluk */
+  margin: 0 auto 24px auto; /* Alt boşluk */
+  max-width: 600px; /* Maksimum genişlik */
+}
+.search-bar input {
+  padding: 12px 16px; /* İç boşluk */
+  border-radius: 12px; /* Köşe yuvarlaklığı */
+  border: 1px solid #eee; /* Kenarlık */
+  font-size: 1rem; /* Yazı boyutu */
+  outline: none; /* Odak çizgisi yok */
+}
+.search-bar button {
+  background: #ea580c; /* Arama butonu arka planı */
+  color: #fff; /* Yazı rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 12px; /* Köşe yuvarlaklığı */
+  padding: 12px 32px; /* İç boşluk */
+  font-weight: 600; /* Kalın yazı */
+  font-size: 1rem; /* Yazı boyutu */
+  cursor: pointer; /* İmleç pointer */
+  transition: background 0.2s, transform 0.2s; /* Geçişler */
+}
+.search-bar button:hover {
+  background: #c2410c; /* Buton hover rengi */
+  transform: scale(1.05); /* Hafif büyüt */
+}
+.footer {
+  background: #111827; /* Alt bilgi arka planı */
+  color: #fff; /* Yazı rengi */
+  text-align: center; /* Ortala */
+  padding: 32px 0 16px 0; /* İç boşluk */
+  margin-top: 48px; /* Üst boşluk */
+  font-size: 1rem; /* Yazı boyutu */
+}
+
+.categories {
+  background: #f9fafb; /* Kategori alanı arka planı */
+  padding: 48px 0 32px 0;
+  text-align: center;
+}
+.categories h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 24px;
+}
+.category-list {
+  display: flex; /* Kategori kutularını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  justify-content: center; /* Ortala */
+  gap: 16px; /* Kutular arası boşluk */
+}
+.category {
+  background: #fff7ed; /* Kategori kutusu arka planı */
+  color: #ea580c; /* Yazı rengi */
+  border-radius: 16px; /* Köşe yuvarlaklığı */
+  padding: 18px 28px; /* İç boşluk */
+  font-size: 1.1rem; /* Yazı boyutu */
+  font-weight: 600; /* Kalın yazı */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Hafif gölge */
+  transition: transform 0.2s, box-shadow 0.2s; /* Geçişler */
+  cursor: pointer; /* İmleç pointer */
+}
+.category:hover {
+  transform: scale(1.07); /* Üzerine gelince büyüt */
+  box-shadow: 0 4px 16px rgba(234,88,12,0.10); /* Gölgeyi artır */
+}
+
+.popular-foods {
+  background: #fff; /* Popüler yemekler arka planı */
+  padding: 48px 0 32px 0; /* İç boşluk */
+  text-align: center; /* Ortala */
+}
+.popular-foods h2 {
+  font-size: 2rem; /* Başlık boyutu */
+  color: #222; /* Başlık rengi */
+  margin-bottom: 24px; /* Alt boşluk */
+}
+.food-list {
+  display: flex; /* Yemek kartlarını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  justify-content: center; /* Ortala */
+  gap: 24px; /* Kartlar arası boşluk */
+}
+.food-card {
+  background: #fff; /* Kart arka planı */
+  border-radius: 18px; /* Köşe yuvarlaklığı */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Hafif gölge */
+  overflow: hidden; /* Taşan içeriği gizle */
+  width: 220px; /* Kart genişliği */
+  transition: transform 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.food-card:hover {
+  transform: translateY(-6px) scale(1.04); /* Üzerine gelince hafif büyüt ve yukarı kaldır */
+  box-shadow: 0 8px 24px rgba(234,88,12,0.10); /* Gölgeyi artır */
+}
+.food-card img {
+  width: 100%; /* Görsel tam genişlik */
+  height: 140px; /* Sabit yükseklik */
+  object-fit: cover; /* Görseli kırpmadan sığdır */
+}
+.food-info {
+  padding: 16px 12px 12px 12px; /* İç boşluk */
+  text-align: left; /* Sola hizala */
+}
+.food-title {
+  font-size: 1.1rem; /* Yemek adı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #222; /* Yazı rengi */
+}
+.food-restaurant {
+  color: #ea580c; /* Restoran adı rengi */
+  font-size: 0.95rem; /* Yazı boyutu */
+  margin-bottom: 6px; /* Alt boşluk */
+}
+.food-price {
+  font-size: 1.1rem; /* Fiyat boyutu */
+  font-weight: 600; /* Kalın yazı */
+  color: #222; /* Yazı rengi */
+}
+.food-original-price {
+  color: #888; /* İndirimli fiyat rengi */
+  text-decoration: line-through; /* Üstü çizili */
+  font-size: 0.95rem; /* Yazı boyutu */
+  margin-left: 6px; /* Sol boşluk */
+}
+
+.featured-restaurants {
+  background: #f9fafb; /* Öne çıkan restoranlar arka planı */
+  padding: 48px 0 32px 0; /* İç boşluk */
+  text-align: center; /* Ortala */
+}
+.featured-restaurants h2 {
+  font-size: 2rem; /* Başlık boyutu */
+  color: #222; /* Başlık rengi */
+  margin-bottom: 24px; /* Alt boşluk */
+}
+.restaurant-list {
+  display: flex; /* Restoran kartlarını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  justify-content: center; /* Ortala */
+  gap: 24px; /* Kartlar arası boşluk */
+}
+.restaurant-card {
+  background: #fff; /* Kart arka planı */
+  border-radius: 18px; /* Köşe yuvarlaklığı */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Hafif gölge */
+  overflow: hidden; /* Taşan içeriği gizle */
+  width: 220px; /* Kart genişliği */
+  transition: transform 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.restaurant-card:hover {
+  transform: translateY(-6px) scale(1.04); /* Üzerine gelince hafif büyüt ve yukarı kaldır */
+  box-shadow: 0 8px 24px rgba(234,88,12,0.10); /* Gölgeyi artır */
+}
+.restaurant-card img {
+  width: 100%; /* Görsel tam genişlik */
+  height: 120px; /* Sabit yükseklik */
+  object-fit: cover; /* Görseli kırpmadan sığdır */
+}
+.restaurant-info {
+  padding: 16px 12px 12px 12px; /* İç boşluk */
+  text-align: left; /* Sola hizala */
+}
+.restaurant-title {
+  font-size: 1.1rem; /* Restoran adı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #222; /* Yazı rengi */
+}
+.restaurant-cuisine {
+  color: #ea580c; /* Mutfak türü rengi */
+  font-size: 0.95rem; /* Yazı boyutu */
+  margin-bottom: 6px; /* Alt boşluk */
+}
+.restaurant-rating {
+  font-size: 1.1rem; /* Puan boyutu */
+  font-weight: 600; /* Kalın yazı */
+  color: #222; /* Yazı rengi */
+}
+
+.features {
+  background: #fff; /* Özellikler bölümü arka planı */
+  padding: 48px 0 32px 0; /* İç boşluk */
+  text-align: center; /* Ortala */
+}
+.features h2 {
+  font-size: 2rem; /* Başlık boyutu */
+  color: #222; /* Başlık rengi */
+  margin-bottom: 24px; /* Alt boşluk */
+}
+.feature-list {
+  display: flex; /* Özellik kutularını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  justify-content: center; /* Ortala */
+  gap: 32px; /* Kutular arası boşluk */
+}
+.feature {
+  background: #f3f4f6; /* Özellik kutusu arka planı */
+  border-radius: 16px; /* Köşe yuvarlaklığı */
+  padding: 28px 32px; /* İç boşluk */
+  width: 200px; /* Kutu genişliği */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Hafif gölge */
+}
+.feature-icon {
+  font-size: 2rem; /* İkon boyutu */
+  margin-bottom: 12px; /* Alt boşluk */
+}
+.feature-title {
+  font-size: 1.1rem; /* Başlık boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #ea580c; /* Başlık rengi */
+  margin-bottom: 6px; /* Alt boşluk */
+}
+.feature-desc {
+  color: #444; /* Açıklama rengi */
+  font-size: 0.98rem; /* Yazı boyutu */
+}
+
+.cities {
+  padding: 32px 0 32px 0; /* Şehirler bölümü iç boşluk */
+  text-align: center; /* Ortala */
+}
+.cities h2 {
+  font-size: 2.2rem; /* Başlık boyutu */
+  color: #222; /* Başlık rengi */
+  margin-bottom: 32px; /* Alt boşluk */
+  font-weight: 700; /* Kalın yazı */
+}
+.city-list {
+  display: flex; /* Şehir kartlarını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  justify-content: center; /* Ortala */
+  gap: 32px; /* Kartlar arası boşluk */
+}
+.city-card {
+  position: relative; /* Konumlandırma */
+  width: 340px; /* Kart genişliği */
+  height: 240px; /* Kart yüksekliği */
+  border-radius: 24px; /* Köşe yuvarlaklığı */
+  overflow: hidden; /* Taşan içeriği gizle */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* Hafif gölge */
+  background: #fff; /* Kart arka planı */
+  transition: transform 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.city-card:hover {
+  transform: translateY(-6px) scale(1.03); /* Üzerine gelince hafif büyüt ve yukarı kaldır */
+  box-shadow: 0 8px 32px rgba(234,88,12,0.10); /* Gölgeyi artır */
+}
+.city-card img {
+  width: 100%; /* Görsel tam genişlik */
+  height: 100%; /* Tam yükseklik */
+  object-fit: cover; /* Görseli kırpmadan sığdır */
+  display: block; /* Blok olarak göster */
+}
+.city-label {
+  position: absolute; /* Konumlandırma */
+  left: 16px; /* Soldan boşluk */
+  bottom: 16px; /* Alttan boşluk */
+  background: #fff; /* Etiket arka planı */
+  color: #222; /* Yazı rengi */
+  font-size: 1.3rem; /* Yazı boyutu */
+  font-weight: 500; /* Kalın yazı */
+  border-radius: 12px; /* Köşe yuvarlaklığı */
+  padding: 8px 22px; /* İç boşluk */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Hafif gölge */
+}
+
+.city-hero {
+  background: #f3f4f6; /* Şehir detay sayfası üst alanı */
+  padding: 48px 0 32px 0; /* İç boşluk */
+  text-align: center; /* Ortala */
+}
+.city-hero h1 {
+  font-size: 2.5rem; /* Başlık boyutu */
+  color: #333; /* Başlık rengi */
+  font-weight: 600; /* Kalın yazı */
+  margin: 0; /* Boşluk yok */
+}
+.breadcrumb {
+  margin: 24px 0 0 40px; /* Dış boşluklar */
+  font-size: 1.1rem; /* Yazı boyutu */
+  color: #888; /* Yazı rengi */
+  display: flex; /* Yatay hizalama */
+  align-items: center; /* Dikeyde ortala */
+  gap: 8px; /* Elemanlar arası boşluk */
+}
+.breadcrumb a {
+  color: #ea580c; /* Link rengi */
+  text-decoration: none; /* Altı çizgisiz */
+  font-weight: 500; /* Kalın yazı */
+}
+.city-rest-title {
+  font-size: 2rem; /* Başlık boyutu */
+  color: #222; /* Başlık rengi */
+  margin: 32px 0 24px 40px; /* Dış boşluklar */
+  text-align: left; /* Sola hizala */
+}
+.city-rest-list {
+  display: flex; /* Restoran kartlarını yatay hizalar */
+  flex-wrap: wrap; /* Taşarsa alt satıra geçer */
+  gap: 32px; /* Kartlar arası boşluk */
+  justify-content: flex-start; /* Sola hizala */
+  margin-left: 40px; /* Soldan boşluk */
+}
+.city-rest-card {
+  background: #fff; /* Kart arka planı */
+  border-radius: 18px; /* Köşe yuvarlaklığı */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Hafif gölge */
+  overflow: hidden; /* Taşan içeriği gizle */
+  width: 340px; /* Kart genişliği */
+  position: relative; /* Konumlandırma */
+  transition: transform 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.city-rest-card:hover {
+  transform: translateY(-6px) scale(1.04); /* Üzerine gelince hafif büyüt ve yukarı kaldır */
+  box-shadow: 0 8px 24px rgba(234,88,12,0.10); /* Gölgeyi artır */
+}
+.city-rest-card img {
+  width: 100%; /* Görsel tam genişlik */
+  height: 160px; /* Sabit yükseklik */
+  object-fit: cover; /* Görseli kırpmadan sığdır */
+  display: block; /* Blok olarak göster */
+}
+.city-rest-info {
+  padding: 16px 18px 12px 18px; /* İç boşluk */
+  text-align: left; /* Sola hizala */
+}
+.city-rest-name {
+  font-size: 1.1rem; /* Restoran adı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #222; /* Yazı rengi */
+}
+.city-rest-desc {
+  color: #888; /* Açıklama rengi */
+  font-size: 0.98rem; /* Yazı boyutu */
+  margin-bottom: 6px; /* Alt boşluk */
+}
+.city-rest-rating {
+  color: #ea580c; /* Puan rengi */
+  font-size: 1.1rem; /* Puan boyutu */
+  font-weight: 600; /* Kalın yazı */
+  display: flex; /* Yatay hizalama */
+  align-items: center; /* Dikeyde ortala */
+  gap: 4px; /* Elemanlar arası boşluk */
+}
+.star {
+  color: #ea580c; /* Yıldız rengi */
+  font-size: 1.2rem; /* Yıldız boyutu */
+}
+.city-rest-badges {
+  position: absolute; /* Konumlandırma */
+  top: 14px; /* Yukarıdan boşluk */
+  left: 14px; /* Soldan boşluk */
+  display: flex; /* Dikey hizalama */
+  flex-direction: column; /* Dikeyde sırala */
+  gap: 6px; /* Rozetler arası boşluk */
+  z-index: 2; /* Üste çıkar */
+}
+.badge {
+  display: inline-block; /* Satır içi blok */
+  padding: 4px 12px; /* İç boşluk */
+  border-radius: 12px; /* Köşe yuvarlaklığı */
+  font-size: 0.95rem; /* Yazı boyutu */
+  font-weight: 600; /* Kalın yazı */
+  color: #fff; /* Yazı rengi */
+}
+.badge-red {
+  background: #e11d48; /* Kırmızı rozet arka planı */
+}
+.badge-pink {
+  background: #be185d; /* Pembe rozet arka planı */
+}
+
+.header-right {
+  display: flex; /* Sağ üst butonları yatay hizalar */
+  align-items: center; /* Dikeyde ortala */
+  gap: 16px; /* Butonlar arası boşluk */
+}
+.login-btn {
+  padding: 8px 18px; /* İç boşluk */
+  border: 1px solid #ccc; /* Kenarlık */
+  border-radius: 10px; /* Köşe yuvarlaklığı */
+  background: #fff; /* Arka plan */
+  color: #222; /* Yazı rengi */
+  font-size: 1rem; /* Yazı boyutu */
+  font-weight: 500; /* Kalın yazı */
+  cursor: pointer; /* İmleç pointer */
+  transition: border 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.login-btn:hover {
+  border-color: #ea580c; /* Hover kenarlık rengi */
+  box-shadow: 0 2px 8px rgba(234,88,12,0.08); /* Hover gölge */
+}
+.signup-btn {
+  padding: 8px 18px; /* İç boşluk */
+  border: none; /* Kenarlık yok */
+  border-radius: 10px; /* Köşe yuvarlaklığı */
+  background: #ea1163; /* Arka plan */
+  color: #fff; /* Yazı rengi */
+  font-size: 1rem; /* Yazı boyutu */
+  font-weight: 600; /* Kalın yazı */
+  cursor: pointer; /* İmleç pointer */
+  margin-left: 4px; /* Sol boşluk */
+  transition: background 0.2s, box-shadow 0.2s; /* Geçişler */
+}
+.signup-btn:hover {
+  background: #c4004e; /* Hover arka plan */
+  box-shadow: 0 2px 8px rgba(234,17,99,0.10); /* Hover gölge */
+}
+.lang-select {
+  display: flex; /* Dil seçici yatay hizalama */
+  align-items: center; /* Dikeyde ortala */
+  gap: 2px; /* Elemanlar arası boşluk */
+  padding: 6px 10px; /* İç boşluk */
+  border-radius: 8px; /* Köşe yuvarlaklığı */
+  background: #fff; /* Arka plan */
+  color: #222; /* Yazı rengi */
+  font-size: 1rem; /* Yazı boyutu */
+  font-weight: 500; /* Kalın yazı */
+  border: 1px solid #eee; /* Kenarlık */
+  margin-left: 8px; /* Sol boşluk */
+  cursor: pointer; /* İmleç pointer */
+  transition: border 0.2s; /* Geçiş */
+}
+.lang-select:hover {
+  border-color: #ea580c; /* Hover kenarlık rengi */
+}
+.lang-icon {
+  display: flex; /* İkon hizalama */
+  align-items: center; /* Dikeyde ortala */
+  font-size: 1.1rem; /* İkon boyutu */
+}
+.cart-btn {
+  background: #f3f4f6; /* Sepet butonu arka planı */
+  border: none; /* Kenarlık yok */
+  border-radius: 50%; /* Daire şekli */
+  width: 40px; /* Genişlik */
+  height: 40px; /* Yükseklik */
+  display: flex; /* İçerik hizalama */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: center; /* Ortala */
+  margin-left: 8px; /* Sol boşluk */
+  cursor: not-allowed; /* Pasif imleç */
+  opacity: 0.7; /* Şeffaflık */
+  transition: box-shadow 0.2s; /* Geçiş */
+}
+.cart-btn svg {
+  display: block; /* Blok olarak göster */
+}
+/* Mobil uyum için */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column; /* Dikey hizala */
+    align-items: flex-start; /* Sola hizala */
+    padding: 12px 8px; /* İç boşluk */
+  }
+  .header-right {
+    margin-top: 10px; /* Üst boşluk */
+    gap: 8px; /* Butonlar arası boşluk */
+  }
+  .nav {
+    margin-bottom: 8px; /* Alt boşluk */
+  }
+}
